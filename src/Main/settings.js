@@ -59,7 +59,7 @@ const schema = {
 	},
 	trayIcon: {
 		enabled: {
-			default: true,
+			default: false,
 			name: 'Enable tray icon',
 			type: 'switch',
 		},
@@ -78,7 +78,7 @@ const schema = {
 			depends: 'enabled',
 		},
 		closeToTray: {
-			default: true,
+			default: false,
 			name: 'Close to Tray',
 			description: 'If enabled, WALC will be hidden everytime you want to close it.',
 			type: 'checkbox',

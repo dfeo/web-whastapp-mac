@@ -29,7 +29,7 @@ build/Release
 build
 
 # Dependency directories
-node_modules
+node_modules/*
 jspm_packages
 
 # Optional npm cache directory
@@ -45,7 +45,7 @@ yarn.lock
 public/js
 public/mix-manifest.json
 release-builds
-dist
+dist/*
 *.tgz
 
 # VS Code Files

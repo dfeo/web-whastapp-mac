@@ -1,7 +1,7 @@
 <p align="center">
 <img src="https://socialify.git.ci/WAClient/WALC/image?description=1&font=Bitter&forks=1&logo=https%3A%2F%2Fgithub.com%2FWAClient%2FWALC%2Fraw%2Fmaster%2Fsrc%2Ficons%2Flogo360x360.png&pattern=Floating%20Cogs&stargazers=1&theme=Dark" alt="WALC" width="640" height="320" />
 </p>
-<h1 align="center">WALC - WhatsApp Linux Client (unofficial)</h1>
+<h1 align="center">WALC - WhatsApp Linux/mac Client for unsoported mac (unofficial)</h1>
 <p align="center">
 
 ![Contributors List](https://img.shields.io/badge/dynamic/json?label=Contributors&query=%24..login&url=https%3A%2F%2Fapi.github.com%2Frepos%2FWAClient%2FWALC%2Fcontributors) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/WAClient/WALC?color=%2325D366&label=Latest%20Release) ![GitHub Releases (by Release)](https://img.shields.io/github/downloads/WAClient/WALC/latest/total?color=%2325D366&label=Latest%20Version%20AppImage%20Downloads&logo=Linux&logoColor=%23FFFFFF) [![GitHub issues](https://img.shields.io/github/issues/WAClient/WALC.svg)](https://github.com/WAClient/WALC/issues) [![GitHub forks](https://img.shields.io/github/forks/WAClient/WALC.svg)](https://github.com/WAClient/WALC/network) [![GitHub stars](https://img.shields.io/github/stars/WAClient/WALC.svg)](https://github.com/WAClient/WALC/stargazers) [![GitHub license](https://img.shields.io/github/license/WAClient/WALC.svg)](https://github.com/WAClient/WALC/blob/master/LICENSE) [![Twitter](https://img.shields.io/twitter/url/https/github.com/WAClient/WALC.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2FWAClient%2FWALC) [![walc](https://snapcraft.io//walc/badge.svg)](https://snapcraft.io/walc) 

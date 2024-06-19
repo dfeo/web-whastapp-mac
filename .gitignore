@@ -54,3 +54,4 @@ dist/*
 
 # Personal Files
 TODO
+*.DS_Store

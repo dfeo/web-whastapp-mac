@@ -1,86 +1,124 @@
-<p align="center">
-<img src="https://socialify.git.ci/WAClient/WALC/image?description=1&font=Bitter&forks=1&logo=https%3A%2F%2Fgithub.com%2FWAClient%2FWALC%2Fraw%2Fmaster%2Fsrc%2Ficons%2Flogo360x360.png&pattern=Floating%20Cogs&stargazers=1&theme=Dark" alt="WALC" width="640" height="320" />
-</p>
-<h1 align="center">WALC - WhatsApp Linux/mac Client for unsupported mac (unofficial)</h1>
-<p align="center">
+![downloads](https://img.shields.io/github/downloads/oOthkOo/whatsapp-desktop/total?style=for-the-badge)
 
-![Contributors List](https://img.shields.io/badge/dynamic/json?label=Contributors&query=%24..login&url=https%3A%2F%2Fapi.github.com%2Frepos%2FWAClient%2FWALC%2Fcontributors) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/WAClient/WALC?color=%2325D366&label=Latest%20Release) ![GitHub Releases (by Release)](https://img.shields.io/github/downloads/WAClient/WALC/latest/total?color=%2325D366&label=Latest%20Version%20AppImage%20Downloads&logo=Linux&logoColor=%23FFFFFF) [![GitHub issues](https://img.shields.io/github/issues/WAClient/WALC.svg)](https://github.com/WAClient/WALC/issues) [![GitHub forks](https://img.shields.io/github/forks/WAClient/WALC.svg)](https://github.com/WAClient/WALC/network) [![GitHub stars](https://img.shields.io/github/stars/WAClient/WALC.svg)](https://github.com/WAClient/WALC/stargazers) [![GitHub license](https://img.shields.io/github/license/WAClient/WALC.svg)](https://github.com/WAClient/WALC/blob/master/LICENSE) [![Twitter](https://img.shields.io/twitter/url/https/github.com/WAClient/WALC.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2FWAClient%2FWALC) [![walc](https://snapcraft.io//walc/badge.svg)](https://snapcraft.io/walc) 
+# WhatsApp Desktop
 
-</p>
+![screenshot](https://github.com/oOthkOo/whatsapp-desktop/blob/master/screenshots/whatsapp-screen.png "Main Window")
 
-A WhatsApp Desktop client for linux systems. This is an unofficial client. Use https://web.whatsapp.com for official web client as official desktop client for linux does not exist.
+Unofficial WhatsApp Desktop Client for OSX, Linux and Windows. Build with [Electron](http://electron.atom.io/).  
 
-<hr/>
+This is **NOT** an official product. This project does not attempt to reverse engineer the WhatsApp API or attempt to reimplement any part of the WhatsApp client. Any communication between the user and WhatsApp servers is handled by official WhatsApp Web itself; this is just a native wrapper for WhatsApp Web, like a browser.
+
+Original versions of WhatsApp Desktop was written by:
+* @bcalik : https://github.com/bcalik/Whatsapp-Desktop
+* @Enrico204 : https://github.com/Enrico204/Whatsapp-Desktop
 
 ## Features
-- **Tray icon & background running** 🏃  
-Close app to tray, unread message badge (with number!), different tray icon when offline
-- **Full width** ⬅️➡️  
-Make WhatsApp occupy all available space on large screen (enable it first in settings)
-- **Chat shortcut** ⚡  
-Use <kbd>Ctrl</kbd>+<kbd>1</kbd> to <kbd>Ctrl</kbd>+<kbd>9</kbd> to switch between your chat quickly
-- **Native notification** 💬  
-Proper formatting of message (bold, italic, link), mark as read button, and for KDE >=5.18, inline/quick reply
-- **Notification grouping** 🗯  
-Group multiple rapid notification into one. Notifications now wouldn't cover half your screen when someone's angry 💢
-- **Offline notification** 📶❌   
-Notifies you when disconnected to network or phone (if you haven't used MD)
-- **Mark all chat as read** ☑☑  
-Have too many unread chats with too little time? You can _"read"_ them all at once!
-- **App Lock** 🔒  
-Secure your chat from prying eyes 👀! _Warning:_ it's not very safe, but it should deter most people away
 
-and many more...
+* Cross platform (OSX, Windows x64, Linux ia32/x64 and ARM v7l)
+* Native notifications
+* System tray icon
+* Open links in browser
+* Badge with the number of notifications in the dock/taskbar
+* Dock icon bounces when a new message is received
+* Focus on contact search input via CMD+F (WIN+F)
+* Phone info window (s/w versions, battery status, etc)
+* Auto-launch on login
+* Start minimized to tray icon
+* Logging system (log to console and *userData*/log.log)
+* Apply custom CSS stylesheet
+* Auto-hide menu bar (Windows, Linux)
+* Disabling GPU rendering (useful when dealing with bugged video drivers)
+* A couple of things can be configured:
+  * Toggle avatar visibility
+  * Toggle preview of the messages visibility
+  * Set the size for the media thumbs
+  * Proxy settings connect to WhatsApp web
 
-## Releases
-[![Get it from The AUR](https://user-images.githubusercontent.com/79008923/170873436-821df1d3-b45f-441b-b756-d81c6ac8d474.png)](http://aur.archlinux.org/packages/walc)
-[![Get it from linux-APPS](https://i.imgur.com/YGU3qMJ.png)](https://www.linux-apps.com/p/1383431/) 
+## Download WhatsApp
 
-To download the pre-built AppImage, please goto the [Latest Release](https://github.com/WAClient/WALC/releases/latest) Page
+* Windows 10 - [Download](https://github.com/oOthkOo/whatsapp-desktop/releases/download/v0.5.2/WhatsApp-win32-x64.zip) - ![Stats](https://img.shields.io/github/downloads/oOthkOo/whatsapp-desktop/latest/WhatsApp-win32-x64.zip?style=flat-square)
+* Mac OSX - [Download](https://github.com/oOthkOo/whatsapp-desktop/releases/download/v0.5.2/WhatsApp-darwin-x64.zip) - ![Stats](https://img.shields.io/github/downloads/oOthkOo/whatsapp-desktop/latest/WhatsApp-darwin-x64.zip?style=flat-square)
+* Ubuntu (32 bits) - [Download](https://github.com/oOthkOo/whatsapp-desktop/releases/download/v0.5.2/whatsapp-desktop-x32.deb) - ![Stats](https://img.shields.io/github/downloads/oOthkOo/whatsapp-desktop/latest/whatsapp-desktop-x32.deb?style=flat-square)
+* Ubuntu (64 bits) - [Download](https://github.com/oOthkOo/whatsapp-desktop/releases/download/v0.5.2/whatsapp-desktop-x64.deb) - ![Stats](https://img.shields.io/github/downloads/oOthkOo/whatsapp-desktop/latest/whatsapp-desktop-x64.deb?style=flat-square)
 
-## Using  WALC - Prebuilt AppImage 
-* Download the latest AppImage in ~/.local/bin which is a recommended location for AppImages
-* Make it executable using `chmod +x ~/.local/bin/WALC.AppImage`
-* When you open it first time, you will be asked for integration, click 'Yes' to add it to Applications menu.
+Donations
+-----
 
-## Manual Compilation and Usage
+:heart: Donations are always welcome :heart:.
 
-If you want to compile the code from its source (applies to the AUR version), you will need the following dependencies:
+Coins | Symbols | Addresses
+--- | --- | ---
+<img src="https://github.com/oOthkOo/hyper-manager/blob/main/pictures/btc.svg" alt="Bitcoin"/> | BTC | 3B52fbzNFQTaKZxWf5GrCUsASD2UP8na4A
+<img src="https://github.com/oOthkOo/hyper-manager/blob/main/pictures/eth.svg" alt="Ethereum"/> | ETH | 0x1C389f1f85Cdb3C2996b83fAc87E496A80698B7C
 
-- Nodejs **<= v16** - later versions such as (17 and 18) crash in the install process, this version is an LTS (called `nodejs-lts-gallium`)
-- npm
-- git (you **do not need** `git` when installing WALC form the AUR)
+## Build WhatsApp Debian/Ubuntu packages
 
-After that you must:
+Follow these instructions to install `whatsapp-desktop` on your system.
 
-```bash
+### Install NPM and Yarn
 
-# Clone the repo
-git clone https://github.com/WAClient/WALC.git
+You need NPM and Yarn to be installed on your system before building deb package.
 
-# Move to WALC directory
-cd WALC
+* NPM  : https://nodejs.org/en/download/package-manager/
+* Yarn : https://yarnpkg.com/lang/en/docs/install/
 
-# Install the dependencies
-npm install
+### Build Linux 32/64 bits packages
 
-# Build the assets
-npm run dev
+You can build `whatsapp-desktop-xxx.deb` package with:
 
-# Or alternatively to watch for changes
-npm run watch
-
-# And to start the app
-npm start
+```sh
+git clone https://github.com/oOthkOo/whatsapp-desktop.git
+cd whatsapp-desktop
+./scripts/build-deb-x64.sh # or ./scripts/build-deb-x32.sh for 32 bits
 ```
 
-## Feature Requests
-To suggest any new feature, please start a new discussion in the [Feature Requests](https://github.com/WAClient/WALC/discussions?discussions_q=category%3A%22Feature+Requests%22) section of [WALC Discussions](https://github.com/WAClient/WALC/discussions) 
+You'll find debian packages into `build/releases` directory.
 
-## Troubleshooting
-If you are having any problems relating to the usage, building or deploying of WALC please reach out to our community in [Troubleshoting](https://github.com/WAClient/WALC/discussions?discussions_q=category%3ATroubleshooting) section of [WALC Discussions](https://github.com/WAClient/WALC/discussions). Before starting a new discussion, please please check the previously created posts as other people might be having the same problem as yours or someone might have already addressed and answered the problem you are facing.
+### Install WhatsApp on Debian, Ubuntu, Mint, ...
+
+```sh
+sudo apt install ./build/releases/whatsapp-desktop-x64.deb
+sudo apt install -f
+```
+
+## Command line switches
+
+    --debug-log         Switch file's log level to "debug" (default: "warn")
 
 ## Contributions
-* You can refer to the Issues section to troubleshoot a problem and submit a PR.
-* While it is not necessary to follow the priority order for bugs and the number of votes for a feature request, it would be really nice if you could.
-* You can find a list of "Good First Issues" [here](https://github.com/WAClient/WALC/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
+
+Contributions are welcome! For feature requests and bug reports please submit an [issue](https://github.com/oOthkOo/whatsapp-desktop/issues).
+
+## Build from source
+
+To build from the source, run the following commands:
+
+```sh
+yarn install
+yarn run build:{platform}
+```
+
+Platform | OS
+--- | ---
+win | Windows only
+osx | OSX only
+osxm1 | OSX arm64 (m1)
+linux | Linux 64 bits
+linux32 | Linux 32 bits
+linuxarmv7l | ARM Linux
+
+You'll find artifacts into `build/dist/` directory.
+
+## Run on-the-fly (for devs)
+
+If you're a developer, you may want to use directly `yarn run dev` (in project root) instead of compiling the code each time. Please note that autostart feature will not work in this mode.
+
+### Cross-build for Windows (from Linux/macOS)
+
+Wine needs to be installed. On macOS, it is installable via Homebrew:  
+
+    brew install wine
+
+On GNU/Linux you can install `wine` from your distro package manager.
+
+Please mind that `wine` requires an Xorg display, so you should set correctly your DISPLAY env var (you can use `Xvfb` if you don't have/want a real Xorg display running)

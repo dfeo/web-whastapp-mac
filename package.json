@@ -1,107 +1,27 @@
 {
-  "name": "walc",
-  "version": "0.3.3",
-  "description": "A WhatsApp Desktop client for linux systems. This is an unofficial client. Use https://web.whatsapp.com for official web client as official desktop client for linux does not exist.",
-  "main": "src/main.js",
-  "scripts": {
-    "start": "electron .",
-    "clean": "rm -rf dist && rm -rf public/js/*",
-    "dist": "npm run clean && npm run prod && npm run rebuild-deps && npm run build",
-    "build": "electron-builder",
-    "rebuild-deps": "electron-rebuild",
-    "dev": "npm run development",
-    "postinstall": "electron-builder install-app-deps",
-    "development": "mix",
-    "watch": "mix watch",
-    "watch-poll": "mix watch -- --watch-options-poll=1000",
-    "hot": "mix watch --hot",
-    "prod": "npm run production",
-    "production": "mix --production"
-  },
-  "bin": {
-    "walc": "main.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/WAClient/WALC.git"
-  },
-  "keywords": [
-    "whatsapp",
-    "whatsapp-linux",
-    "whatsapp-web"
-  ],
-  "author": "cstayyab <cstayyab@gmail.com> (https://cstayyab.com)",
-  "license": "GPL-3.0-or-later",
-  "bugs": {
-    "url": "https://github.com/WAClient/WALC/issues"
-  },
-  "build": {
-    "appId": "com.cstayyab.linux.unofficial.whatsapp",
-    "npmRebuild": false,
-    "productName": "WALC",
-    "files": [
-      "!dist",
-      "!release-builds"
-    ],
-    "linux": {
-      "category": "Social",
-      "description": "An unofficial WhatsApp Desktop client for Linux. For official client use https://web.whatsapp.com as the official desktop client for Linux is not available.",
-      "target": [
-        "AppImage"
-      ],
-      "icon": "src/icons/logo360x360.png",
-      "synopsis": "WALC - unoffficial WhatsApp Linux Client",
-      "publish": {
-        "provider": "github",
-        "owner": "WAClient",
-        "host": "github.com"
-      }
+    "name": "whatsapp-desktop",
+    "version": "0.5.2",
+    "repository": "https://github.com/oOthkOo/whatsapp-desktop.git",
+    "description": "Unofficial WhatsApp Desktop Client for OSX, Linux and Windows. Build with Electron.",
+    "main": "main.js",
+    "scripts": {
+        "dev": "electron --debug=5858 ./app",
+        "preinstall": "cd app && yarn",
+        "gettext": "xgettext app/*.js -j --omit-header -o app/locale/messages.pot && xgettext app/html/*.html -L JavaScript -j --omit-header -o app/locale/messages.pot",
+        "clean": "node ./scripts/clean.js",
+        "build:win": "electron-packager ./app \"WhatsApp\" --overwrite --out=build/dist --package-manager=yarn --platform=win32 --arch=x64 --electron-version=17.0.0 --icon=build/assets/win/whatsapp.ico",
+        "build:osx": "electron-packager ./app \"WhatsApp\" --overwrite --out=build/dist --package-manager=yarn --platform=darwin --arch=x64 --electron-version=17.0.0 --icon=build/assets/osx/whatsapp.icns",
+        "build:osxm1": "electron-packager ./app \"WhatsApp\" --overwrite --out=build/dist --package-manager=yarn --platform=darwin --arch=arm64 --electron-version=17.0.0 --icon=build/assets/osx/whatsapp.icns",
+        "build:linux": "electron-packager ./app \"WhatsApp\" --overwrite --out=build/dist --package-manager=yarn --platform=linux --arch=x64 --electron-version=17.0.0 --icon=build/assets/win/whatsapp.ico",
+        "build:linux32": "electron-packager ./app \"WhatsApp\" --overwrite --out=build/dist --package-manager=yarn --platform=linux --arch=ia32 --electron-version=17.0.0 --icon=build/assets/win/whatsapp.ico",
+        "build:linuxarmv7l": "electron-packager ./app \"WhatsApp\" --overwrite --out=build/dist --package-manager=yarn --platform=linux --arch=armv7l --electron-version=17.0.0 --icon=build/assets/win/whatsapp.ico"
+    },
+    "devDependencies": {
+        "electron": "^17.0.0",
+        "electron-packager": "15.5.1"
+    },
+    "dependencies": {
+        "process-nextick-args": "^1.0.7",
+        "util-deprecate": "^1.0.2"
     }
-  },
-  "overrides": {
-    "dbus-next": {
-      "usocket": "~1.0.1"
-    }
-  },
-  "devDependencies": {
-    "@mdi/js": "^7.0.96",
-    "deepmerge": "^4.2.2",
-    "electron": "^20.3.8",
-    "electron-builder": "^23.6.0",
-    "electron-devtools-installer": "^3.2.0",
-    "electron-rebuild": "^3.2.9",
-    "laravel-mix": "^6.0.49",
-    "postcss": "^8.4.16",
-    "sass": "~1.32.13",
-    "sass-loader": "^12.6.0",
-    "vue": "^2.7.14",
-    "vue-loader": "^15.10.1",
-    "vue-template-compiler": "^2.7.10",
-    "vuetify": "^2.6.10",
-    "vuetify-loader": "^1.9.2",
-    "vuetifyjs-mix-extension": "0.0.20",
-    "webpack": "^5.74.0"
-  },
-  "dependencies": {
-    "axios": "^1.2.1",
-    "bcrypt": "^5.0.1",
-    "create-desktop-shortcuts": "^1.10.1",
-    "dbus-next": "^0.10.2",
-    "dot-prop": "^6.0.1",
-    "electron-context-menu": "^3.5.0",
-    "electron-store": "^8.1.0",
-    "electron-updater": "^5.2.1",
-    "electron-window-state": "^5.0.3",
-    "get-pixels": "^3.3.3",
-    "get-port-sync": "^1.0.1",
-    "is-online": "^10.0.0",
-    "lsb-release": "^0.1.0",
-    "mime": "^3.0.0",
-    "puppeteer-core": "^18.0.5",
-    "puppeteer-in-electron": "^3.0.5",
-    "vue-router": "^3.5.3",
-    "vue-tel-input-vuetify": "^1.5.3",
-    "vuex": "^3.6.2",
-    "whatsapp-web-electron.js": "v1.23.0-1"
-  }
 }
